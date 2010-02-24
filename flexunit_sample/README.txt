@@ -1,7 +1,11 @@
 ■実行環境
-http://opensource.adobe.com/wiki/display/flexunit/Downloads
-上記から FlexUnit を DL し、中身の swc ファイルを libs にコピーする。
-※このソース一式には FlexUnit が含まれてるので、DLする必要はない。
+1.コンパイラについて
+	FlexSDK3.4 で実行しています
+
+2.FlexUnit について
+	http://opensource.adobe.com/wiki/display/flexunit/Downloads
+	上記から FlexUnit を DL し、中身の swc ファイルを libs にコピーする。
+	※このソース一式には FlexUnit が含まれてるので、DLする必要はない。
 
 ■実行方法
 rascut -s -c -compiler.library-path+=./libs ./src/TestRunner.mxml
