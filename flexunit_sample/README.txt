@@ -15,7 +15,7 @@ http://localhost:3001 で監視できるので、autotest 相当の事ができ�
 ore.addListener(new UIListener(testRunner));
 の行をコメントアウトしてもコンソールに結果が出力されていない気がする。
 
-■TOD
+■TODO
 1.テストスイートを作る
 2.まっとうなテストを作る（ボタン押したとか、そーいうの）
 
