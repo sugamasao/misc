@@ -1,6 +1,6 @@
 ■実行環境
 1.コンパイラについて
-	FlexSDK3.4 で実行しています
+	FlexSDK3.4 で実行しています.
 
 2.FlexUnit について
 	http://opensource.adobe.com/wiki/display/flexunit/Downloads
