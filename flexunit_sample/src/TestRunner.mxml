@@ -5,7 +5,7 @@
 			import org.flexunit.listeners.UIListener;
 			import org.flexunit.runner.FlexUnitCore;
 
-			import test.sample.CalculateTest;
+			import test.TestSuiteAll;
 
 			protected function creationCompleteHandler(event:FlexEvent):void
 			{
@@ -16,7 +16,10 @@
 				core.addListener(new UIListener(testRunner));
 				
 				// テストを実行するrunメソッドで、引数に作成したテストクラスを指定する
-				core.run(CalculateTest);
+				// こっちはテストクラスを単体で実施
+				//core.run(CalculateTest);
+				// こっちはテストスイートを実施
+				core.run(TestSuiteAll);
 			}
 		]]></mx:Script>
   <flexUnitUIRunner:TestRunnerBase id="testRunner" width="100%" height="100%"/>
