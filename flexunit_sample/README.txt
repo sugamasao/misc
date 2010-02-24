@@ -16,6 +16,9 @@ ore.addListener(new UIListener(testRunner));
 の行をコメントアウトしてもコンソールに結果が出力されていない気がする。
 
 ■TODO
-1.テストスイートを作る
-2.まっとうなテストを作る（ボタン押したとか、そーいうの）
+1.まっとうなテストを作る（ボタン押したとか、そーいうの）
+
+■情報源
+http://katapad.com/flash/wiki/index.php?FlexUnit4
+http://d.hatena.ne.jp/ActionScript/20091121/fd_flex_unit_4_test
 
