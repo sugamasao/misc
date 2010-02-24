@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:flexUnitUIRunner="http://www.adobe.com/2009/flexUnitUIRunner">
+	<mx:Button label="押してね" x="10" y="10" click="clickHandler(event)" />
+	<mx:HBox>
+		<mx:Text text="計算結果:" />
+		<mx:Text id="targetText" text="" />
+</mx:HBox>
+<mx:Script><![CDATA[
+			import sample.Calculate;
+
+			protected function clickHandler(event:MouseEvent):void
+			{
+				var calc:Calculate = new Calculate();
+				targetText.text = calc.add(10, 20).toString();
+			}
+		]]></mx:Script>
+</mx:Application>

@@ -1,14 +1,11 @@
 package sample
 {
-	import flash.display.Sprite;
-
 	/**
 	 * テスト対象クラスのサンプル
 	 */
-	public class Calculate extends Sprite
+	public class Calculate
 	{
 		public function Calculate() {
-			trace("init.");
 		}
 
 		/**

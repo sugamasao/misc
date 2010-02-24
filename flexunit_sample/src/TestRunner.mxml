@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:flexUnitUIRunner="http://www.adobe.com/2009/flexUnitUIRunner" width="1024" height="600" creationComplete="creationCompleteHandler(event)">
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:flexUnitUIRunner="http://www.adobe.com/2009/flexUnitUIRunner" creationComplete="creationCompleteHandler(event)">
   <mx:Script><![CDATA[
 			import mx.events.FlexEvent;
 			import org.flexunit.listeners.UIListener;
