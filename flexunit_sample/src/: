@@ -2,7 +2,7 @@
 <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml">
   <mx:Button id="button" label="push to button!" click="clickHandler(event)"/>
   <mx:HBox>
-    <mx:Text text="result = "/>
+	  <mx:Text text="result => "/>
     <mx:Text id="targetText" text=""/>
   </mx:HBox>
   <mx:Script><![CDATA[
