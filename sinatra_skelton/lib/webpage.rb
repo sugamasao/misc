@@ -15,13 +15,11 @@ ENV['RACK_ENV'] ||= "production"
 
 # 開発時用
 configure :development do 
-  puts "develop"
   require 'ruby-debug'
 end
 
 # デフォルトの動作
 configure :production do
-  puts "pro"
   not_found do
     "Not found"
   end
