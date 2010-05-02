@@ -15,11 +15,17 @@ ENV['RACK_ENV'] ||= "production"
 
 # 開発時用
 configure :development do 
+  # 各ページ用の Sinatra ページを集める
+  Dir["#{File.dirname(__FILE__)}/controller/**/*.rb"].each {|controller| load controller }
+
   require 'ruby-debug'
 end
 
 # デフォルトの動作
 configure :production do
+  # 各ページ用の Sinatra ページを集める
+  Dir["#{File.dirname(__FILE__)}/controller/**/*.rb"].each {|controller| load controller }
+
   not_found do
     "Not found"
   end
@@ -31,12 +37,14 @@ end
 
 # 初期設定
 before do
-  # PATH_INFO を / なしに合わせる
-  request.env['PATH_INFO'].gsub!(/\/$/, '')
 end
 
-# 各ページ用の Sinatra ページを集める
-Dir["#{File.dirname(__FILE__)}/controller/**/*.rb"].each {|controller| load controller }
+
+# hoge/ のような '/' 終わりを '/' 無しへリダイレクト 
+# ただし、 http://example.com の場合は末尾 '/' が付く
+get %r{^(.+)/$} do |c|
+  redirect c, 303
+end
 
 helpers do
   include Rack::Utils
