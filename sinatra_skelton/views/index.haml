@@ -1,5 +1,14 @@
-%html
+!!!
+
+%html{:lang => 'ja'}
   %head
-    %title SINATRA BOOK
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'viewport', :content => 'width=320', :initial_scale => "1.0"}
+    %title SINATRA 
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"#{get_prefix}/style.css"}
   %body
     %h1="hoge = #{locals[:hoge]}"
+
+  -# JS を書くよ
+  :javascript
+    document.write("<div>JS document.write</div>")

@@ -5,8 +5,8 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 
-set :haml, {:format => :html5 }
-set :sass, {:style => :compact } 
+set :haml, {:format => :html5, :escape_html => true }
+set :sass, {:style => :compressed }
 set :root, File.dirname(__FILE__) + "/.."
 set :public, File.dirname(__FILE__) + '/../public'
 
@@ -49,15 +49,25 @@ end
 helpers do
   include Rack::Utils
   alias_method :h, :escape_html
+
+  # /img 等の前に何かが付く場合の対応（/antd/img/hoge.png みたいな）
+  def get_prefix
+    return env['SCRIPT_NAME']
+  end
+
+  # キレイなURLのみを取得
+  def get_uri
+    return env['rack.url_scheme'] + "://" + env['HTTP_HOST'] + env['SCRIPT_NAME'] + env['PATH_INFO']
+  end
 end
 
 
 #####################
 # CSS 出力用
 #####################
-get '/stylesheet.css' do
+get '/style.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :stylesheet
+  sass :style
 end
 
 
